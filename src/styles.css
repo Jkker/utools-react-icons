@@ -1,0 +1,48 @@
+@import "antd/dist/antd.css";
+@import "antd/dist/antd.dark.css" (prefers-color-scheme: dark);
+
+/* * {
+  opacity: 0.85;
+} */
+#root {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: unset !important;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: rgba(0, 0, 0, 0.07);
+}
+
+.ant-select-item.ant-select-item-option:not(.ant-select-item-option-disabled):hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: rgba(255, 255, 255, 0.07);
+  }
+
+  .ant-select-item.ant-select-item-option:not(.ant-select-item-option-disabled):hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .ant-btn:hover,
+  .ant-btn:focus {
+    color: #1890ff;
+    border-color: #1890ff;
+    background: transparent;
+  }
+}
