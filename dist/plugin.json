@@ -6,7 +6,7 @@
       "code": "search",
       "explain": "React Icons 图标搜索",
       "cmds": [
-        "react-icons",
+        "react icons",
         "icons",
         "ri"
       ]

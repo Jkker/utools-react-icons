@@ -1,4 +1,4 @@
-import { Checkbox, Select } from "antd";
+import { Checkbox, Select, Tag } from "antd";
 import { debounce } from "lodash";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { IconsManifest } from "react-icons/lib";
@@ -21,6 +21,30 @@ const matchIconName = (iconName, query) =>
 
 const SEARCH_KEYS = ["/"];
 const CTRL_SEARCH_KEYS = ["f", "k"];
+
+const tagRender = (props) => {
+  const { label, value, closable, onClose } = props;
+
+  const onPreventMouseDown = (event) => {
+    console.log("🌟", event);
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
+  return (
+    <Tag
+      color={value}
+      onMouseDown={onPreventMouseDown}
+      closable={closable}
+      onClose={onClose}
+      style={{
+        marginRight: 3,
+      }}
+    >
+      {label}
+    </Tag>
+  );
+};
 
 function App() {
   const [iconSets, setIconSets] = useState(ALL_ICON_KEYS);
@@ -97,6 +121,7 @@ function App() {
         optionLabelProp="label"
         bordered={false}
         virtual={false}
+        tagRender={tagRender}
         dropdownRender={(menu) => (
           <>
             {menu}

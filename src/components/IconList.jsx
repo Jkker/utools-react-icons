@@ -3,7 +3,7 @@ import { useCallback } from "react";
 import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeGrid as Grid } from "react-window";
 
-const columnWidth = 120 + 8;
+const columnWidth = 104 + 8;
 const rowHeight = 80 + 8;
 const padding = 4;
 
@@ -23,6 +23,7 @@ const IconButton = ({ onClick, Icon, name, style }) => (
         height: rowHeight - padding * 2,
         width: "100%",
         whiteSpace: "nowrap",
+        padding
       }}
       onContextMenu={(e) => {
         e.preventDefault();
