@@ -1,5 +1,6 @@
-@import 'antd/dist/antd.css';
-@import 'antd/dist/antd.dark.css' (prefers-color-scheme: dark);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 #root {
   height: 100vh;
@@ -30,7 +31,9 @@ body {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-.ant-select-item.ant-select-item-option:not(.ant-select-item-option-disabled):hover {
+.ant-select-item.ant-select-item-option:not(
+    .ant-select-item-option-disabled
+  ):hover {
   background-color: rgba(0, 0, 0, 0.25);
 }
 .ant-menu-item {
@@ -56,7 +59,9 @@ body {
     background-color: rgba(255, 255, 255, 0.07);
   }
 
-  .ant-select-item.ant-select-item-option:not(.ant-select-item-option-disabled):hover,
+  .ant-select-item.ant-select-item-option:not(
+      .ant-select-item-option-disabled
+    ):hover,
   .ant-menu-item:hover {
     background-color: rgba(255, 255, 255, 0.2);
   }
